@@ -7,6 +7,7 @@ import logo from '../../../assets/logo.png';
 import Container from "../../ui/Container/Container";
 import { NavLink } from "react-router-dom";
 import type { Theme } from "../../../provider/ThemeProvider";
+import ThemeButton from "../../ui/Button/ThemeButton";
 
 type Props = {
     theme: Theme
@@ -14,7 +15,7 @@ type Props = {
     toggleTheme: () => void
 }
 
-const Header = ({theme, onNavigate, toggleTheme}: Props) => {
+const Header = ({ theme, onNavigate, toggleTheme }: Props) => {
     return (
         <header className={`py-10 ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
             <Container className="flex justify-between items-center">
@@ -34,7 +35,7 @@ const Header = ({theme, onNavigate, toggleTheme}: Props) => {
                             <li><NavLink to={'/search'} className="flex items-center gap-2 cursor-pointer"><HiMagnifyingGlass /> Szukaj</NavLink></li>
                         </ul>
                     </nav>
-                    <button onClick={toggleTheme} className="px-4 py-2 border rounded cursor-pointer">Tryb jasny/ciemny</button>
+                    <ThemeButton theme={theme} toggleTheme={toggleTheme} />
                     <div className="mt-1 cursor-pointer">
                         <GoGlobe />
                     </div>
