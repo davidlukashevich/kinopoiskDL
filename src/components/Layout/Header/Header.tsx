@@ -1,14 +1,13 @@
-import { useState } from "react"
+import { useState } from "react";
 import { GoGlobe } from "react-icons/go";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { IoHomeOutline, IoMenu, IoClose } from "react-icons/io5";
-import { MdOutlineRateReview } from "react-icons/md";
-import logo from '../../../assets/logo.png';
-import Container from "../../ui/Container/Container";
+import { IoClose, IoHomeOutline, IoMenu } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import type { Theme } from "../../../provider/ThemeProvider";
+import logo from '../../../assets/logo.png';
 import ThemeButton from "../../ui/Button/ThemeButton";
+import Container from "../../ui/Container/Container";
+import type { Theme } from "../../../types/TTheme";
 
 type Props = {
     theme: Theme
@@ -23,8 +22,7 @@ const Header = ({ theme, onNavigate, toggleTheme }: Props) => {
     return (
         <header className={`py-6 ${isLight ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
             <Container className="flex justify-between items-center">
-                
-                {/* LEFT SIDE */}
+
                 <div className="flex gap-4 items-center">
                     <img
                         src={logo}
@@ -33,17 +31,14 @@ const Header = ({ theme, onNavigate, toggleTheme }: Props) => {
                         onClick={() => onNavigate('/')}
                     />
 
-                    {/* Desktop navigation */}
                     <nav className="hidden md:block">
                         <ul className="flex gap-4 text-xl cursor-pointer">
                             <li><NavLink to="/" className="flex items-center gap-2"><IoHomeOutline /> Mój DL</NavLink></li>
                             <li><NavLink to="/favorites" className="flex items-center gap-2"><IoMdHeartEmpty /> Ulubione</NavLink></li>
-                            <li><NavLink to="/opinions" className="flex items-center gap-2"><MdOutlineRateReview /> Recenzje</NavLink></li>
                         </ul>
                     </nav>
                 </div>
 
-                {/* RIGHT SIDE */}
                 <div className="hidden md:flex gap-4 items-center text-xl">
                     <nav>
                         <ul>
@@ -62,7 +57,6 @@ const Header = ({ theme, onNavigate, toggleTheme }: Props) => {
                     </div>
                 </div>
 
-                {/* BURGER BUTTON (mobile) */}
                 <button
                     className="md:hidden text-3xl"
                     onClick={() => setOpen(!open)}
@@ -71,13 +65,11 @@ const Header = ({ theme, onNavigate, toggleTheme }: Props) => {
                 </button>
             </Container>
 
-            {/* MOBILE MENU */}
             {open && (
                 <div className={`md:hidden px-6 pt-4 pb-6 text-lg space-y-4 ${isLight ? "bg-gray-100" : "bg-gray-900"}`}>
                     <nav className="flex flex-col gap-4">
                         <NavLink to="/" onClick={() => setOpen(false)} className="flex items-center gap-2"><IoHomeOutline /> Mój DL</NavLink>
                         <NavLink to="/favorites" onClick={() => setOpen(false)} className="flex items-center gap-2"><IoMdHeartEmpty /> Ulubione</NavLink>
-                        <NavLink to="/opinions" onClick={() => setOpen(false)} className="flex items-center gap-2"><MdOutlineRateReview /> Recenzje</NavLink>
                         <NavLink to="/search" onClick={() => setOpen(false)} className="flex items-center gap-2"><HiMagnifyingGlass /> Szukaj</NavLink>
                     </nav>
 

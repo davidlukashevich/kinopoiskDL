@@ -1,6 +1,6 @@
-import FilmCard from "../FilmCard/FilmCard";
-import type { FilmsResponse } from "../../types/TFilms";
 import type { NavigateFunction } from "react-router-dom";
+import type { FilmsResponse } from "../../types/TFilms";
+import FilmCardContainer from "../FilmCard/FilmCardContainer";
 
 type Props = {
   films: FilmsResponse | null;
@@ -50,7 +50,7 @@ const FilmsList = ({
         >
           {films?.results.map((film) => (
             <div key={film.id} style={{ width: cardWidth, flexShrink: 0 }}>
-              <FilmCard id={film.id} title={film.title} img={film.poster_path} navigate={navigate} />
+              <FilmCardContainer id={film.id} title={film.title} img={film.poster_path} navigate={navigate} />
             </div>
           ))}
         </div>

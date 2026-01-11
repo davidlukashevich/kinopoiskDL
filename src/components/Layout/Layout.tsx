@@ -1,4 +1,4 @@
-import type { Theme } from "../../provider/ThemeProvider"
+import type { Theme } from "../../types/TTheme"
 import Container from "../ui/Container/Container"
 import FooterContainer from "./Footer/FooterContainer"
 import HeaderContainer from "./Header/HeaderContainer"
@@ -9,10 +9,11 @@ type Props = {
 }
 
 const Layout = ({ children, theme }: Props) => {
+    const isLight = theme === 'light'
     return (
         <div className="min-h-screen flex flex-col">
             <HeaderContainer />
-            <main className={`flex-1 ${theme === 'light' ? 'bg-white text-black' : 'bg-gray-700 text-white'}`}>
+            <main className={`flex-1 ${isLight ? 'bg-white text-black' : 'bg-gray-700 text-white'}`}>
                 <Container>
                     {children}
                 </Container>

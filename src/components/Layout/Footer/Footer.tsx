@@ -1,14 +1,15 @@
 import Container from "../../ui/Container/Container"
 import logo from '../../../assets/logo.png'
-import type { Theme } from "../../../provider/ThemeProvider"
+import type { Theme } from "../../../types/TTheme"
 
 type Props = {
     theme: Theme
 }
 
 const Footer = ({ theme }: Props) => {
+    const isLight = theme === 'light'
     return (
-        <footer className={`py-10 ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
+        <footer className={`py-10 ${isLight ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
             <Container>
                 <div className="flex justify-center items-center gap-3 mb-2">
                     <img src={logo} alt="Kinopoisk DL" className="h-12 w-auto" />

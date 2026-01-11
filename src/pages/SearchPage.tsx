@@ -1,9 +1,9 @@
 import SearchFilmsContainer from "../components/SearchFilms/SearchFilmsContainer"
 
-const SearchPage = () => {
+const SearchFilmsPage = () => {
     return (
         <SearchFilmsContainer />
     )
 }
 
-export default SearchPage
+export default SearchFilmsPage

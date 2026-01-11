@@ -1,4 +1,4 @@
-import type { Theme } from "../../../provider/ThemeProvider"
+import type { Theme } from "../../../types/TTheme"
 
 type Props = {
     theme: Theme

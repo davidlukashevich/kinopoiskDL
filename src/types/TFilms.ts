@@ -68,3 +68,10 @@ export type TFilmDetails = {
     vote_average: number;
     vote_count: number;
 };
+
+export type FavoriteFilm = {
+    id: number
+    title: string
+    poster_path?: string | null
+    release_date?: string
+}
