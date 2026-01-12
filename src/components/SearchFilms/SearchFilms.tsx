@@ -26,15 +26,7 @@ const SearchFilms = ({ query, searchFilms, theme, setQuery, navigate }: Props) =
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Wpisz tytuł filmu..."
-          className={`
-            w-full max-w-[700px] md:w-700 px-4 py-3 rounded-lg bg-white/10 border outline-none
-            ${
-              isLight
-                ? "text-black placeholder-gray-500 border-black/20 focus:border-black/40"
-                : "text-white placeholder-gray-300 border-white/20 focus:border-white/40"
-            }
-          `}
-        />
+          className={`w-full max-w-[700px] md:w-700 px-4 py-3 rounded-lg bg-white/10 border outline-none ${isLight ? "text-black placeholder-gray-500 border-black/20 focus:border-black/40" : "text-white placeholder-gray-300 border-white/20 focus:border-white/40"}`}/>
       </form>
 
       <div className="flex flex-wrap gap-6 justify-center md:justify-start">

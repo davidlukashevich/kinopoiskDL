@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import LayoutContainer from "./components/Layout/LayoutContainer"
-import FavoritesFimsPage from "./pages/FavoritesPage"
+import FavoritesFimsPage from "./pages/FavoritesFimsPage"
 import FilmDetailsPage from "./pages/FilmDetailsPage"
 import HomePage from "./pages/HomePage"
-import OpinionsFilmsPage from "./pages/OpinionsPage"
-import SearchFilmsPage from "./pages/SearchPage"
+import OpinionsFilmsPage from "./pages/OpinionsFilmsPage"
+import SearchFilmsPage from "./pages/SearchFilmsPage"
 
 const App = () => {
   return (

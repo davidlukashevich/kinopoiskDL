@@ -7,11 +7,9 @@ type Props = {
   title: string
   img: string | null
   navigate: NavigateFunction
-
   removeFilm?: (id: number) => void
   watchTrailer?: (title: string, date?: string) => void
   releaseDate?: string
-
   className?: string
 }
 

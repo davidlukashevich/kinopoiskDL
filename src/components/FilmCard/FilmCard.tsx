@@ -32,7 +32,6 @@ const FilmCard = ({
   const fullImg = img ? `https://image.tmdb.org/t/p/w500${img}` : "https://placehold.co/300x450?text=Brak+plakatu&font=roboto"
 
   const hasFavoriteActions = typeof toggleFavorite === "function" && typeof isFavorite === "boolean"
-
   const hasRemoveAction = typeof onRemove === "function"
   const hasAnyActions = Boolean(onWatchTrailer) || hasFavoriteActions || hasRemoveAction
 
