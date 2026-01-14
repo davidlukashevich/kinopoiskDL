@@ -1,19 +1,22 @@
-import type { ActionCreatorWithoutPayload } from "@reduxjs/toolkit";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import type { AppDispatch, RootState } from "../../store";
 import FilmsList from "./FilmsList";
+import type { ActionCreatorWithPayload } from "@reduxjs/toolkit";
+import { useTranslation } from "react-i18next";
 
 type Props = {
-    action: ActionCreatorWithoutPayload,
+    action: ActionCreatorWithPayload<{ lang: string; }, string>,
     selectorKey: "upcoming" | "popular" | "rated" | "playing"
 }
 
 const FilmsListContainer = ({ action, selectorKey }: Props) => {
     const dispatch = useDispatch<AppDispatch>();
+    const { i18n } = useTranslation()
     const navigate = useNavigate();
     const films = useSelector((s: RootState) => s.films[selectorKey]);
+    const lang = i18n.language
 
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -26,8 +29,8 @@ const FilmsListContainer = ({ action, selectorKey }: Props) => {
     const total = films?.results.length ?? 0;
 
     useEffect(() => {
-        dispatch(action());
-    }, [dispatch]);
+        dispatch(action({lang}));
+    }, [dispatch, lang]);
 
     useEffect(() => {
         const update = () => {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
 import type { AppDispatch, RootState } from "../../store"
@@ -14,10 +15,12 @@ const FilmDetailsContainer = () => {
     const { filmDetails } = useSelector((s: RootState) => s.films)
     const { trailer } = useSelector((s: RootState) => s.trailer)
     const navigate = useNavigate()
+    const { i18n } = useTranslation()
+    const lang = i18n.language
 
     useEffect(() => {
-        dispatch(fetchFilmDetails(id))
-    }, [dispatch])
+        dispatch(fetchFilmDetails({ id, lang }))
+    }, [dispatch, lang])
 
     const watchTrailer = (title: string) => {
         setOpen(true)

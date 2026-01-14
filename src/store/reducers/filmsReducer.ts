@@ -1,12 +1,12 @@
 import { createAction, createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { FilmsResponse, TFilmDetails } from "../../types/TFilms";
 
-export const fetchSearchFilms = createAction<{ query: string }>("fetchSearchFilms")
-export const fetchPopularFilms = createAction("fetchPopularFilms")
-export const fetchUpcomingFilms = createAction("fetchUpcomingFilms")
-export const fetchRatedFilms = createAction("fetchRatedFilms")
-export const fetchNowPlayingFilms = createAction("fetchNowPlayingFilms")
-export const fetchFilmDetails = createAction<string | undefined>("fetchFilmDetails")
+export const fetchSearchFilms = createAction<{ query: string, lang: string }>("fetchSearchFilms")
+export const fetchPopularFilms = createAction<{lang: string}>("fetchPopularFilms")
+export const fetchUpcomingFilms = createAction<{lang: string}>("fetchUpcomingFilms")
+export const fetchRatedFilms = createAction<{lang: string}>("fetchRatedFilms")
+export const fetchNowPlayingFilms = createAction<{lang: string}>("fetchNowPlayingFilms")
+export const fetchFilmDetails = createAction<{id: string | undefined, lang: string}>("fetchFilmDetails")
 
 type initialStateType = {
     searchFilms: FilmsResponse | null

@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Мой DL",
+    "favorites": "Избранное",
+    "search": "Поиск",
+    "chooseLanguage": "Выберите язык"
+  },
+
+  "favorites": {
+    "title": "Сохранённые фильмы",
+    "empty": "Нет сохранённых фильмов"
+  },
+
+  "film": {
+    "description": "Описание",
+    "budget": "Бюджет",
+    "revenue": "Сборы",
+    "country": "Страна",
+    "companies": "Компании",
+    "noPoster": "Нет постера"
+  },
+
+  "opinions": {
+    "title": "Отзывы о фильме",
+    "subtitle": "Поделитесь впечатлениями о фильме",
+    "unknownFilm": "Неизвестный фильм",
+    "noPoster": "Нет постера",
+    "placeholder": "Напишите свой отзыв...",
+    "add": "Добавить отзыв",
+    "empty": "Отзывов пока нет"
+  },
+
+  "home": {
+    "upcoming": "Ожидаемые премьеры",
+    "nowPlaying": "Сейчас в кино",
+    "topRated": "Лучшие фильмы",
+    "popular": "Популярные фильмы"
+  },
+
+  "search": {
+    "title": "Поиск фильма",
+    "placeholder": "Введите название фильма...",
+    "notFound": "Фильмы не найдены"
+  },
+
+  "footer": {
+    "rights": "© 2025 Kinopoisk DL. Все права защищены.",
+    "tagline": "Kinopoisk DL — ваш гид в мире кино"
+  }
+}

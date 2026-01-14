@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "My DL",
+    "favorites": "Favorites",
+    "search": "Search",
+    "chooseLanguage": "Choose language"
+  },
+
+  "favorites": {
+    "title": "Saved movies",
+    "empty": "No saved movies"
+  },
+
+  "film": {
+    "description": "Description",
+    "budget": "Budget",
+    "revenue": "Revenue",
+    "country": "Country",
+    "companies": "Companies",
+    "noPoster": "No poster"
+  },
+
+  "opinions": {
+    "title": "Movie reviews",
+    "subtitle": "Share your opinion about this movie",
+    "unknownFilm": "Unknown movie",
+    "noPoster": "No poster",
+    "placeholder": "Write your review...",
+    "add": "Add review",
+    "empty": "No reviews yet"
+  },
+
+  "home": {
+    "upcoming": "Upcoming releases",
+    "nowPlaying": "Now in theaters",
+    "topRated": "Top rated movies",
+    "popular": "Popular movies"
+  },
+
+  "search": {
+    "title": "Search movie",
+    "placeholder": "Enter movie title...",
+    "notFound": "No movies found"
+  },
+
+  "footer": {
+    "rights": "© 2025 Kinopoisk DL. All rights reserved.",
+    "tagline": "Kinopoisk DL — Your guide to the world of cinema"
+  }
+}

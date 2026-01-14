@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './provider/ThemeProvider.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store/index.ts'
+import "./i18n"
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>

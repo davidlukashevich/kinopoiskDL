@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Mój DL",
+    "favorites": "Ulubione",
+    "search": "Szukaj",
+    "chooseLanguage": "Choose language"
+  },
+
+  "favorites": {
+    "title": "Zapisane filmy",
+    "empty": "Brak zapisanych filmów"
+  },
+
+  "film": {
+    "description": "Opis",
+    "budget": "Budżet",
+    "revenue": "Opłaty",
+    "country": "Kraj",
+    "companies": "Firmy",
+    "noPoster": "Brak plakatu"
+  },
+
+  "opinions": {
+    "title": "Opinie o filmie",
+    "subtitle": "Podziel się opinią o filmie",
+    "unknownFilm": "Nieznany film",
+    "noPoster": "Brak plakatu",
+    "placeholder": "Napisz swoją opinię...",
+    "add": "Dodaj opinię",
+    "empty": "Brak opinii"
+  },
+
+  "home": {
+    "upcoming": "Oczekiwane premiery",
+    "nowPlaying": "Teraz na dużych ekranach",
+    "topRated": "Najlepsze filmy",
+    "popular": "Popularne filmy"
+  },
+
+  "search": {
+    "title": "Wyszukaj film",
+    "placeholder": "Wpisz tytuł filmu...",
+    "notFound": "Nie znaleziono filmów"
+  },
+
+  "footer": {
+    "rights": "© 2025 Kinopoisk DL. Wszystkie prawa zastrzeżone.",
+    "tagline": "Kinopoisk DL — Twój przewodnik po świecie kina"
+  }
+}

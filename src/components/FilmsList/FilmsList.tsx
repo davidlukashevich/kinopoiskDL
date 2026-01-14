@@ -1,6 +1,8 @@
 import type { NavigateFunction } from "react-router-dom";
 import type { FilmsResponse } from "../../types/TFilms";
 import FilmCardContainer from "../FilmCard/FilmCardContainer";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 type Props = {
   films: FilmsResponse | null;
@@ -35,7 +37,7 @@ const FilmsList = ({
           onClick={onLeft}
           className="absolute left-0 z-10 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-black/70 transition"
         >
-          ◀
+          <FaArrowAltCircleLeft />
         </button>
       )}
 
@@ -61,7 +63,7 @@ const FilmsList = ({
           onClick={onRight}
           className="absolute right-0 z-10 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-black/70 transition"
         >
-          ▶
+          <FaArrowAltCircleRight />
         </button>
       )}
     </div>
