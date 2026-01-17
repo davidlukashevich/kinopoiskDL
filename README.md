@@ -51,9 +51,9 @@ Proces instalacji może potrwać kilka minut w zależności od połączenia inte
 Aplikacja wykorzystuje zewnętrzne API, takie jak **TMDB** i **YouTube**.  
 Aby aplikacja działała poprawnie, należy utworzyć plik `.env` w głównym katalogu projektu i uzupełnić go kluczami API:
 
-    VITE_TMDB_API_TOKEN=YOUR_TMDB_API_TOKEN
+    VITE_TMDB_API_TOKEN=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NWU1ZGNlYzVlMTI2YTFmNjM5ODU4ODMzNWRmYTMxMyIsIm5iZiI6MTc2Njc1NzUwNS41ODMwMDAyLCJzdWIiOiI2OTRlOTQ4MWQzMmE2MWEwYjA4MTFkNDkiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.YYR1HILADosHVHFwa3mkBrSX6RVwy10nz0WFIYxlWU8
     VITE_TMDB_API_URL=https://api.themoviedb.org/3
-    VITE_YOUTUBE_API_KEY=YOUR_YOUTUBE_API_KEY
+    VITE_YOUTUBE_API_KEY=AIzaSyDVcJvuaSc0j2lhzh9uBUXO1NOM_w0zATk
     VITE_YOUTUBE_API_URL=https://www.googleapis.com/youtube/v3
 
 > W przypadku braku kluczy API, funkcje takie jak wyświetlanie zwiastunów czy wyszukiwanie filmów nie będą działać.
